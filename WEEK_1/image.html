@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <style>
+        /* Add some basic styling to the navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #375035;
+            font-family: 'kode mono';
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: right;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: #0FFA00;
+            color: black;
+        }
+
+        /* Style for the active link */
+        .navbar a.active {
+            background-color: #2ECF23;
+            color: white;
+        }
+
+        #search-form {
+            margin: 200px auto;
+            border: 2px solid #417A3D;
+            border-radius: 15px;
+            width: 400px;
+            height: 200px;
+        }
+
+        #search-field {
+            border-radius: 5px;
+            border: 2px solid #417A3D;
+            height: 25px;
+            width: 200px;
+            display: block;
+            margin: 75px auto 25px auto;
+        }
+
+        #search-btn {
+            border-radius: 5px;
+            border: 2px solid #417A3D;
+            height: 25px;
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="http://127.0.0.1:3000/cs50web/WEEK_1/index.html">Basic Search</a>
+        <a class="active" href="http://127.0.0.1:3000/cs50web/WEEK_1/image.html">Image Search</a>
+        <a href="http://127.0.0.1:3000/cs50web/WEEK_1/advanced.html">Advanced Search</a>
+    </div>
+    <div style="padding:16px"></div>
+    <div id="search-form">
+        <form action="https://www.google.com/search">
+            <input id="search-field" type="text" name="q">
+            <input id="search-btn" type="submit" value="Google Image Search">
+        </form>
+    </div>
+
+</body>
+</html>
