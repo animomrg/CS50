@@ -34,28 +34,47 @@
             color: white;
         }
 
-        #search-form {
-            margin: 200px auto;
+        #search-container {
+            border-radius: 50px;
             border: 2px solid #417A3D;
-            border-radius: 15px;
-            width: 400px;
-            height: 200px;
+            height: 50px;
+            width: 500px;
+            display: block;
+            margin: 50px auto 10px auto;
         }
-
         #search-field {
-            border-radius: 5px;
-            border: 2px solid #417A3D;
-            height: 25px;
-            width: 200px;
-            display: block;
-            margin: 75px auto 25px auto;
+            border: none;
+            margin: 5px 25px;
+            height: 40px;
+            width: 90%;
         }
 
-        #search-btn {
+        .search-btn {
             border-radius: 5px;
             border: 2px solid #417A3D;
             height: 25px;
-            display: block;
+            display: inline block;
+            margin: 10px;
+        }
+
+        .btn-div {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #search-title {
+            color: #417A3D;
+            font-family: 'kode mono';
+            font-size: 4rem;
+            width: 100%;
+            margin: 10% auto 0 auto;
+        }
+
+        #search-title > h2 {
+            text-align: center;
             margin: auto;
         }
 
@@ -66,17 +85,25 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="http://127.0.0.1:3000/cs50web/WEEK_1/index.html">Basic Search</a>
-        <a class="active" href="http://127.0.0.1:3000/cs50web/WEEK_1/image.html">Image Search</a>
-        <a href="http://127.0.0.1:3000/cs50web/WEEK_1/advanced.html">Advanced Search</a>
+        <a href="/CS50/WEEK_1/index.html">Basic Search</a>
+        <a class="active" href="/CS50/WEEK_1/image.html">Image Search</a>
+        <a href="/CS50/WEEK_1/advanced.html">Advanced Search</a>
     </div>
-    <div style="padding:16px"></div>
+    <div id="search-title">
+        <h2>Gogol</h2>
+    </div>
     <div id="search-form">
         <form action="https://www.google.com/search">
-            <input id="search-field" type="text" name="q">
-            <input id="search-btn" type="submit" value="Google Image Search">
+            <div id="search-input">
+                <div id="search-container">
+                    <input id="search-field" type="text" name="q" autofocus autocomplete="off" placeholder="I want to see pictures of...">
+                </div>
+                <div class="btn-div">
+                    <input type="hidden" name="tbm" value="isch">
+                    <input class="search-btn" type="submit" value="Gogol Image Search">
+                </div>
+            </div>
         </form>
     </div>
-
 </body>
 </html>
