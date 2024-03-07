@@ -1,0 +1,14 @@
+{% extends 'auctions/layout.html' %} <!-- Adjust based on your base template -->
+
+{% block body %}
+<h2>{{ category.name }}</h2>
+{% if listings %}
+<ul>
+    {% for listing in listings %}
+    <li>{{ listing.title }} - {{ listing.description }}</li> <!-- Customize as needed -->
+    {% endfor %}
+</ul>
+{% else %}
+<p>No items found in this category.</p>
+{% endif %}
+{% endblock %}
